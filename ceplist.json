@@ -1,0 +1,20 @@
+{
+  "ceps": [
+    {
+      "cep": "64218-470",
+      "logradouro": "Avenida Marquês de Paranaguá",
+      "bairro": "Nova Parnaíba",
+      "localidade": "Parnaíba",
+      "uf": "PI",
+      "id": 1
+    },
+    {
+      "cep": "64218-780",
+      "logradouro": "Rua Oeiras",
+      "bairro": "Nova Parnaíba",
+      "localidade": "Parnaíba",
+      "uf": "PI",
+      "id": 2
+    }
+  ]
+}

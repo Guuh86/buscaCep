@@ -1,0 +1,82 @@
+<html>
+<header>
+    <title>Busca CEP</title>
+    <meta charset="UTF-8">
+</header>
+
+<body>
+    <div id="grades">
+        <div id="divCenter">
+            <h4>INSIRA UM CEP:</h4>
+            <form id="form">
+                <table>
+                    <tr>
+                        <td>CEP:</td>
+                        <td><input name="cep" type="text" id="cep" value="" maxlength="9" [(ngModel)]="cep.cep">&nbsp;
+                            <button (click)="buscar()">BUSCAR</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">
+                            <hr size="5" color="black">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>RUA:</td>
+                        <td><input type="text" name="rua" id="rua" size="60" [(ngModel)]="cep.logradouro" readonly></td>
+                    </tr>
+                    <tr>
+                        <td>CIDADE:</td>
+                        <td><input type="text" name="cidade" id="cidade" size="60" [(ngModel)]="cep.localidade"
+                                readonly></td>
+                    </tr>
+                    <tr>
+                        <td>BAIRRO:</td>
+                        <td><input type="text" name="bairro" id="bairro" size="60" [(ngModel)]="cep.bairro" readonly>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>ESTADO:</td>
+                        <td><input type="text" name="estado" id="estado" size="60" [(ngModel)]="cep.uf" readonly></td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <button class="btnsave" (click)="cadastrarCep()">SALVAR</button>
+                        </td>
+                    </tr>
+                </table>
+            </form>
+        </div>
+        <div id="divMap">
+            <agm-map [latitude]="lat" [longitude]="lng" [zoom]="zoom">
+                <agm-marker [latitude]="lat" [longitude]="lng"></agm-marker>
+            </agm-map>
+        </div>
+        <div id="divCenter">
+            <h4>CEPS CADASTRADOS:</h4>
+            <table>
+                <tr>
+                    <th>#ID</th>
+                    <th>CEP</th>
+                    <th>RUA</th>
+                    <th>BAIRRO</th>
+                    <th>CIDADE</th>
+                    <th>ESTADO</th>
+                    <th>AÇÕES</th>
+                </tr>
+                <tr *ngFor="let ceps of ceps">
+                    <td class="tdBorder">{{ceps.id}}</td>
+                    <td class="tdBorder">{{ceps.cep}}</td>
+                    <td class="tdBorder">{{ceps.logradouro}}</td>
+                    <td class="tdBorder">{{ceps.bairro}}</td>
+                    <td class="tdBorder">{{ceps.localidade}}</td>
+                    <td class="tdBorder">{{ceps.uf}}</td>
+                    <td class="tdBorder"><button (click)="remover(ceps.id)">Remover</button></td>
+                    <td class="tdBorder"><button (click)="geocode(ceps.logradouro, ceps.localidade)">Ver no Mapa</button></td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</body>
+
+</html>

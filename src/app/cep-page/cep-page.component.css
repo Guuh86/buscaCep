@@ -1,0 +1,38 @@
+table, .tdBorder {
+    border: 1px solid black;
+}
+
+body{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.btnsave{
+    margin-left: 310%;
+}
+
+td{
+    text-align: center;
+    margin: 5%;
+}
+
+table{
+    white-space: nowrap;
+}
+
+agm-map{
+    height: 380%;
+    width: 100%;
+}
+
+
+#grades{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-auto-rows: minmax(100px, auto);
+}
+
+#divCenter{
+    justify-content: center;
+    margin: 0 auto;
+    text-align: center;
+}
