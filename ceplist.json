@@ -15,6 +15,14 @@
       "localidade": "Parnaíba",
       "uf": "PI",
       "id": 2
+    },
+    {
+      "cep": "64218-375",
+      "logradouro": "Avenida Álvaro Mendes",
+      "bairro": "Nova Parnaíba",
+      "localidade": "Parnaíba",
+      "uf": "PI",
+      "id": 3
     }
   ]
 }

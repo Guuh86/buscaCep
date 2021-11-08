@@ -9,7 +9,7 @@
         <div id="divCenter">
             <h4>INSIRA UM CEP:</h4>
             <form id="form">
-                <table>
+                <table class="table-content">
                     <tr>
                         <td>CEP:</td>
                         <td><input name="cep" type="text" id="cep" value="" maxlength="9" [(ngModel)]="cep.cep">&nbsp;
@@ -23,21 +23,21 @@
                     </tr>
                     <tr>
                         <td>RUA:</td>
-                        <td><input type="text" name="rua" id="rua" size="60" [(ngModel)]="cep.logradouro" readonly></td>
+                        <td><input type="text" placeholder="..." name="rua" id="rua" size="60" [(ngModel)]="cep.logradouro" readonly></td>
                     </tr>
                     <tr>
                         <td>CIDADE:</td>
-                        <td><input type="text" name="cidade" id="cidade" size="60" [(ngModel)]="cep.localidade"
+                        <td><input type="text" placeholder="..." name="cidade" id="cidade" size="60" [(ngModel)]="cep.localidade"
                                 readonly></td>
                     </tr>
                     <tr>
                         <td>BAIRRO:</td>
-                        <td><input type="text" name="bairro" id="bairro" size="60" [(ngModel)]="cep.bairro" readonly>
+                        <td><input type="text" placeholder="..." name="bairro" id="bairro" size="60" [(ngModel)]="cep.bairro" readonly>
                         </td>
                     </tr>
                     <tr>
                         <td>ESTADO:</td>
-                        <td><input type="text" name="estado" id="estado" size="60" [(ngModel)]="cep.uf" readonly></td>
+                        <td><input type="text" placeholder="..." name="estado" id="estado" size="60" [(ngModel)]="cep.uf" readonly></td>
                     </tr>
                     <tr>
                         <td>
@@ -54,26 +54,31 @@
         </div>
         <div id="divCenter">
             <h4>CEPS CADASTRADOS:</h4>
-            <table>
-                <tr>
-                    <th>#ID</th>
-                    <th>CEP</th>
-                    <th>RUA</th>
-                    <th>BAIRRO</th>
-                    <th>CIDADE</th>
-                    <th>ESTADO</th>
-                    <th>AÇÕES</th>
-                </tr>
-                <tr *ngFor="let ceps of ceps">
-                    <td class="tdBorder">{{ceps.id}}</td>
-                    <td class="tdBorder">{{ceps.cep}}</td>
-                    <td class="tdBorder">{{ceps.logradouro}}</td>
-                    <td class="tdBorder">{{ceps.bairro}}</td>
-                    <td class="tdBorder">{{ceps.localidade}}</td>
-                    <td class="tdBorder">{{ceps.uf}}</td>
-                    <td class="tdBorder"><button (click)="remover(ceps.id)">Remover</button></td>
-                    <td class="tdBorder"><button (click)="geocode(ceps.logradouro, ceps.localidade)">Ver no Mapa</button></td>
-                </tr>
+            <table class="content-table">
+                <thead>
+                    <tr>
+                        <th>#ID</th>
+                        <th>CEP</th>
+                        <th>RUA</th>
+                        <th>BAIRRO</th>
+                        <th>CIDADE</th>
+                        <th>ESTADO</th>
+                        <th>AÇÕES</th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let ceps of ceps" class="active-row">
+                        <td class="tdBorder">{{ceps.id}}</td>
+                        <td class="tdBorder">{{ceps.cep}}</td>
+                        <td class="tdBorder">{{ceps.logradouro}}</td>
+                        <td class="tdBorder">{{ceps.bairro}}</td>
+                        <td class="tdBorder">{{ceps.localidade}}</td>
+                        <td class="tdBorder">{{ceps.uf}}</td>
+                        <td class="tdBorder"><button (click)="remover(ceps.id)">Remover</button></td>
+                        <td class="tdBorder"><button (click)="geocode(ceps.logradouro, ceps.localidade)">Ver no Mapa</button></td>
+                    </tr>
+                </tbody>
             </table>
         </div>
     </div>

@@ -19,7 +19,7 @@ export class CepPageComponent implements OnInit {
 
   lat: any;
   lng: any;
-  zoom: number = 8;
+  zoom: number = 14;
 
   constructor(
     private cepService: BuscaCepService,
@@ -48,6 +48,7 @@ export class CepPageComponent implements OnInit {
   convert(resp: any){
     this.lat = resp.results[0].geometry.location.lat;
     this.lng = resp.results[0].geometry.location.lng;
+    this.zoom = 14;
   }
 
   buscar() {
