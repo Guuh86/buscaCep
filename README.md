@@ -14,7 +14,7 @@ Este projeto foi gerado com o [Angular CLI](https://github.com/angular/angular-c
 ## Imagens
 
 ![Screenshot](git1.png)
-![Screenshot](https://imgbox.com/ew2uJdDu)
+![Screenshot](git2.png)
 
 
 ## Ajuda
