@@ -16,4 +16,4 @@ Este projeto foi gerado com o [Angular CLI](https://github.com/angular/angular-c
 
 ## Ajuda
 
-To get more help on the Angular CLI use `ng help` ou consulte [Angular CLI Overview and Command Reference](https://angular.io/cli)
+Para mais ajuda execute `ng help` ou consulte [Angular CLI Overview and Command Reference](https://angular.io/cli)
