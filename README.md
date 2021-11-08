@@ -13,8 +13,8 @@ Este projeto foi gerado com o [Angular CLI](https://github.com/angular/angular-c
 
 ## Imagens
 
-<img src="https://imgbox.com/YSw3mYnx">
-<img src="https://imgbox.com/ew2uJdDu">
+![alt text](https://imgbox.com/YSw3mYnx)
+![alt text](https://imgbox.com/ew2uJdDu)
 
 
 ## Ajuda
